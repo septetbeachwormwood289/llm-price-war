@@ -1,0 +1,522 @@
+{
+  "last_updated": "2026-03-09",
+  "currency": "USD",
+  "providers": {
+    "openai": {
+      "name": "OpenAI",
+      "url": "https://openai.com/pricing",
+      "models": {
+        "gpt-4o": {
+          "name": "GPT-4o",
+          "type": "text",
+          "input_price_per_1m": 2.5,
+          "output_price_per_1m": 10.0,
+          "context_window": 128000,
+          "max_output": 16384,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "batch_discount": 0.5,
+          "speed_toks": 100,
+          "best_for": "General-purpose flagship",
+          "notes": "Flagship multimodal model"
+        },
+        "gpt-4o-mini": {
+          "name": "GPT-4o-mini",
+          "type": "text",
+          "input_price_per_1m": 0.15,
+          "output_price_per_1m": 0.6,
+          "context_window": 128000,
+          "max_output": 16384,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "batch_discount": 0.5,
+          "speed_toks": 150,
+          "best_for": "Cost-efficient tasks",
+          "notes": "Best value for simple tasks"
+        },
+        "gpt-4.5-preview": {
+          "name": "GPT-4.5 Preview",
+          "type": "text",
+          "input_price_per_1m": 75.0,
+          "output_price_per_1m": 150.0,
+          "context_window": 128000,
+          "max_output": 16384,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "batch_discount": null,
+          "speed_toks": 60,
+          "best_for": "Research, complex reasoning",
+          "notes": "Most expensive OpenAI model, preview access"
+        },
+        "o1": {
+          "name": "o1",
+          "type": "text",
+          "input_price_per_1m": 15.0,
+          "output_price_per_1m": 60.0,
+          "context_window": 200000,
+          "max_output": 100000,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "batch_discount": null,
+          "speed_toks": 40,
+          "best_for": "Advanced reasoning, math, code",
+          "notes": "Chain-of-thought reasoning model"
+        },
+        "o1-mini": {
+          "name": "o1-mini",
+          "type": "text",
+          "input_price_per_1m": 1.1,
+          "output_price_per_1m": 4.4,
+          "context_window": 128000,
+          "max_output": 65536,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "batch_discount": null,
+          "speed_toks": 80,
+          "best_for": "Fast reasoning at lower cost",
+          "notes": "Smaller reasoning model"
+        },
+        "o3-mini": {
+          "name": "o3-mini",
+          "type": "text",
+          "input_price_per_1m": 1.1,
+          "output_price_per_1m": 4.4,
+          "context_window": 200000,
+          "max_output": 100000,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "batch_discount": null,
+          "speed_toks": 90,
+          "best_for": "Reasoning with larger context",
+          "notes": "Latest mini reasoning model"
+        },
+        "text-embedding-3-small": {
+          "name": "text-embedding-3-small",
+          "type": "embedding",
+          "input_price_per_1m": 0.02,
+          "output_price_per_1m": null,
+          "dimensions": 1536,
+          "max_input": 8191,
+          "notes": "Best value embedding model"
+        },
+        "text-embedding-3-large": {
+          "name": "text-embedding-3-large",
+          "type": "embedding",
+          "input_price_per_1m": 0.13,
+          "output_price_per_1m": null,
+          "dimensions": 3072,
+          "max_input": 8191,
+          "notes": "Highest quality OpenAI embeddings"
+        },
+        "dall-e-3": {
+          "name": "DALL-E 3",
+          "type": "image",
+          "price_per_image": {
+            "1024x1024": 0.04,
+            "1024x1792": 0.08,
+            "1792x1024": 0.08
+          },
+          "speed": "~15s",
+          "notes": "Standard quality pricing; HD is 2x"
+        }
+      }
+    },
+    "anthropic": {
+      "name": "Anthropic",
+      "url": "https://anthropic.com/pricing",
+      "models": {
+        "claude-opus-4": {
+          "name": "Claude Opus 4",
+          "type": "text",
+          "input_price_per_1m": 15.0,
+          "output_price_per_1m": 75.0,
+          "context_window": 200000,
+          "max_output": 32000,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "prompt_caching_discount": 0.9,
+          "speed_toks": 40,
+          "best_for": "Complex analysis, writing, code",
+          "notes": "Most capable Anthropic model"
+        },
+        "claude-sonnet-4": {
+          "name": "Claude Sonnet 4",
+          "type": "text",
+          "input_price_per_1m": 3.0,
+          "output_price_per_1m": 15.0,
+          "context_window": 200000,
+          "max_output": 16000,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "prompt_caching_discount": 0.9,
+          "speed_toks": 80,
+          "best_for": "Balanced performance/cost",
+          "notes": "Best balance of quality and speed"
+        },
+        "claude-haiku-3.5": {
+          "name": "Claude Haiku 3.5",
+          "type": "text",
+          "input_price_per_1m": 0.8,
+          "output_price_per_1m": 4.0,
+          "context_window": 200000,
+          "max_output": 8192,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "prompt_caching_discount": 0.9,
+          "speed_toks": 150,
+          "best_for": "Fast, cheap tasks",
+          "notes": "Fastest Anthropic model"
+        },
+        "voyage-3": {
+          "name": "Voyage 3",
+          "type": "embedding",
+          "input_price_per_1m": 0.06,
+          "output_price_per_1m": null,
+          "dimensions": 1024,
+          "max_input": 32000,
+          "notes": "Via Anthropic/Voyage AI partnership"
+        }
+      }
+    },
+    "google": {
+      "name": "Google",
+      "url": "https://ai.google.dev/pricing",
+      "models": {
+        "gemini-2.5-pro": {
+          "name": "Gemini 2.5 Pro",
+          "type": "text",
+          "input_price_per_1m": 1.25,
+          "output_price_per_1m": 10.0,
+          "context_window": 1000000,
+          "max_output": 65536,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "speed_toks": 70,
+          "best_for": "Long-context analysis",
+          "notes": "1M context window, competitive pricing"
+        },
+        "gemini-2.0-flash": {
+          "name": "Gemini 2.0 Flash",
+          "type": "text",
+          "input_price_per_1m": 0.1,
+          "output_price_per_1m": 0.4,
+          "context_window": 1000000,
+          "max_output": 8192,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "speed_toks": 200,
+          "best_for": "Ultra-cheap high-volume",
+          "notes": "Best price-to-performance ratio"
+        },
+        "gemini-1.5-pro": {
+          "name": "Gemini 1.5 Pro",
+          "type": "text",
+          "input_price_per_1m": 1.25,
+          "output_price_per_1m": 5.0,
+          "context_window": 2000000,
+          "max_output": 8192,
+          "supports_vision": true,
+          "supports_function_calling": true,
+          "speed_toks": 60,
+          "best_for": "Massive context processing",
+          "notes": "2M context — largest available"
+        },
+        "text-embedding-004": {
+          "name": "text-embedding-004",
+          "type": "embedding",
+          "input_price_per_1m": 0.006,
+          "output_price_per_1m": null,
+          "dimensions": 768,
+          "max_input": 2048,
+          "notes": "Cheapest embedding model available"
+        }
+      }
+    },
+    "meta": {
+      "name": "Meta (via Together AI)",
+      "url": "https://www.together.ai/pricing",
+      "models": {
+        "llama-3.3-70b": {
+          "name": "Llama 3.3 70B",
+          "type": "text",
+          "input_price_per_1m": 0.6,
+          "output_price_per_1m": 0.6,
+          "context_window": 128000,
+          "max_output": 4096,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 100,
+          "best_for": "Open-source, self-hostable",
+          "notes": "Together AI pricing; free to self-host"
+        },
+        "llama-3.1-405b": {
+          "name": "Llama 3.1 405B",
+          "type": "text",
+          "input_price_per_1m": 3.5,
+          "output_price_per_1m": 3.5,
+          "context_window": 128000,
+          "max_output": 4096,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 30,
+          "best_for": "Best open-source quality",
+          "notes": "Largest open-source model; Together AI pricing"
+        }
+      }
+    },
+    "mistral": {
+      "name": "Mistral",
+      "url": "https://mistral.ai/pricing",
+      "models": {
+        "mistral-large": {
+          "name": "Mistral Large",
+          "type": "text",
+          "input_price_per_1m": 2.0,
+          "output_price_per_1m": 6.0,
+          "context_window": 128000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 80,
+          "best_for": "Multilingual, European data compliance",
+          "notes": "Flagship Mistral model"
+        },
+        "mistral-small": {
+          "name": "Mistral Small",
+          "type": "text",
+          "input_price_per_1m": 0.1,
+          "output_price_per_1m": 0.3,
+          "context_window": 128000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 150,
+          "best_for": "Budget multilingual tasks",
+          "notes": "Great value for European languages"
+        },
+        "codestral": {
+          "name": "Codestral",
+          "type": "text",
+          "input_price_per_1m": 0.3,
+          "output_price_per_1m": 0.9,
+          "context_window": 256000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": false,
+          "speed_toks": 120,
+          "best_for": "Code generation, 256K context",
+          "notes": "Specialized coding model"
+        },
+        "mistral-embed": {
+          "name": "Mistral Embed",
+          "type": "embedding",
+          "input_price_per_1m": 0.1,
+          "output_price_per_1m": null,
+          "dimensions": 1024,
+          "max_input": 8192,
+          "notes": "Mistral embedding model"
+        }
+      }
+    },
+    "deepseek": {
+      "name": "DeepSeek",
+      "url": "https://platform.deepseek.com/api-docs/pricing",
+      "models": {
+        "deepseek-v3": {
+          "name": "DeepSeek-V3",
+          "type": "text",
+          "input_price_per_1m": 0.27,
+          "output_price_per_1m": 1.1,
+          "context_window": 128000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 60,
+          "best_for": "Cheapest capable model",
+          "notes": "Extremely competitive pricing from China"
+        },
+        "deepseek-r1": {
+          "name": "DeepSeek-R1",
+          "type": "text",
+          "input_price_per_1m": 0.55,
+          "output_price_per_1m": 2.19,
+          "context_window": 128000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 30,
+          "best_for": "Cheap reasoning alternative",
+          "notes": "Reasoning model, competitive with o1"
+        }
+      }
+    },
+    "cohere": {
+      "name": "Cohere",
+      "url": "https://cohere.com/pricing",
+      "models": {
+        "command-r-plus": {
+          "name": "Command R+",
+          "type": "text",
+          "input_price_per_1m": 2.5,
+          "output_price_per_1m": 10.0,
+          "context_window": 128000,
+          "max_output": 4096,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 50,
+          "best_for": "RAG, enterprise search",
+          "notes": "Optimized for retrieval-augmented generation"
+        },
+        "command-r": {
+          "name": "Command R",
+          "type": "text",
+          "input_price_per_1m": 0.15,
+          "output_price_per_1m": 0.6,
+          "context_window": 128000,
+          "max_output": 4096,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 80,
+          "best_for": "Cheap RAG tasks",
+          "notes": "Budget-friendly RAG model"
+        },
+        "embed-v4": {
+          "name": "Cohere Embed v4",
+          "type": "embedding",
+          "input_price_per_1m": 0.1,
+          "output_price_per_1m": null,
+          "dimensions": 1024,
+          "max_input": 512,
+          "notes": "Latest Cohere embedding model"
+        }
+      }
+    },
+    "xai": {
+      "name": "xAI",
+      "url": "https://docs.x.ai/docs/models#models-and-pricing",
+      "models": {
+        "grok-3": {
+          "name": "Grok-3",
+          "type": "text",
+          "input_price_per_1m": 3.0,
+          "output_price_per_1m": 15.0,
+          "context_window": 131000,
+          "max_output": 16384,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 70,
+          "best_for": "Advanced reasoning, competitive with Claude Opus",
+          "notes": "xAI flagship model"
+        },
+        "grok-3-mini": {
+          "name": "Grok-3 Mini",
+          "type": "text",
+          "input_price_per_1m": 0.3,
+          "output_price_per_1m": 0.5,
+          "context_window": 131000,
+          "max_output": 16384,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 150,
+          "best_for": "Fast, efficient reasoning",
+          "notes": "Budget xAI model"
+        }
+      }
+    },
+    "groq": {
+      "name": "Groq",
+      "url": "https://groq.com/pricing",
+      "models": {
+        "llama-3.3-70b-groq": {
+          "name": "Llama 3.3 70B (via Groq)",
+          "type": "text",
+          "input_price_per_1m": 0.59,
+          "output_price_per_1m": 0.79,
+          "context_window": 128000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 500,
+          "best_for": "Fastest inference available",
+          "notes": "Groq LPU inference — ultra-low latency"
+        },
+        "mixtral-8x7b-groq": {
+          "name": "Mixtral 8x7B (via Groq)",
+          "type": "text",
+          "input_price_per_1m": 0.24,
+          "output_price_per_1m": 0.24,
+          "context_window": 32000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": true,
+          "speed_toks": 400,
+          "best_for": "Ultra-fast MoE model",
+          "notes": "Mixtral on Groq LPU hardware"
+        }
+      }
+    },
+    "perplexity": {
+      "name": "Perplexity",
+      "url": "https://docs.perplexity.ai/guides/pricing",
+      "models": {
+        "sonar-pro": {
+          "name": "Sonar Pro",
+          "type": "text",
+          "input_price_per_1m": 3.0,
+          "output_price_per_1m": 15.0,
+          "context_window": 200000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": false,
+          "speed_toks": 60,
+          "best_for": "Search-augmented generation",
+          "notes": "Includes real-time web search"
+        },
+        "sonar": {
+          "name": "Sonar",
+          "type": "text",
+          "input_price_per_1m": 1.0,
+          "output_price_per_1m": 1.0,
+          "context_window": 128000,
+          "max_output": 8192,
+          "supports_vision": false,
+          "supports_function_calling": false,
+          "speed_toks": 100,
+          "best_for": "Fast search-augmented",
+          "notes": "Budget search-augmented model"
+        }
+      }
+    },
+    "stability": {
+      "name": "Stability AI",
+      "url": "https://platform.stability.ai/pricing",
+      "models": {
+        "stable-diffusion-3.5": {
+          "name": "Stable Diffusion 3.5",
+          "type": "image",
+          "price_per_image": {
+            "1024x1024": 0.035,
+            "other": 0.04
+          },
+          "speed": "~5s",
+          "notes": "Open-weight image model, API pricing"
+        }
+      }
+    },
+    "midjourney": {
+      "name": "Midjourney",
+      "url": "https://midjourney.com/",
+      "models": {
+        "midjourney-v6": {
+          "name": "Midjourney v6",
+          "type": "image",
+          "price_per_image": {
+            "subscription": "~$0.02-0.12 depending on plan"
+          },
+          "speed": "~30s",
+          "notes": "Subscription-based: $10-120/month"
+        }
+      }
+    }
+  }
+}

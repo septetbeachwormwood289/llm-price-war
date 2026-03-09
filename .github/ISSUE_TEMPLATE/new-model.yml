@@ -1,0 +1,37 @@
+name: New Model Request
+description: Request adding a new model or provider
+title: "[NEW] "
+labels: ["new-model"]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+      placeholder: "e.g., Cohere, Reka, xAI"
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model name
+      placeholder: "e.g., Grok-3"
+    validations:
+      required: true
+  - type: input
+    id: pricing
+    attributes:
+      label: Pricing (input/output per 1M tokens)
+      placeholder: "e.g., $5.00 / $15.00"
+    validations:
+      required: true
+  - type: input
+    id: context
+    attributes:
+      label: Context window
+      placeholder: "e.g., 128K"
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+    validations:
+      required: true
